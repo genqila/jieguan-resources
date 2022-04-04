@@ -264,16 +264,17 @@ Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodgin
 Config.DodgeHP            = 100     -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
-Config.BossPriority       = false   -- Set to true to attack Unique/SuperUnique monsters first when clearing.
+Config.PacketCasting      = 0       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
 Config.PrecastRange       = 20      -- Precast skill (BOs, Shields, ...) will be used when a monster is this far away.
 Config.TeleStomp          = false   -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
-Config.ClearType          = 0x2     -- 0x0 = kill all | 0x2 = kill champion + unique + boss | 0x4 = kill unique + boss.
+Config.ClearType          = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
+Config.BossPriority       = false   -- Set to true to attack Unique/SuperUnique monsters first when clearing.
 
 -- #### ClearPath Setting ####
-Config.ClearPath.Enabled  = true  -- Set true to enable the bot clearing enemies while pathfinding.
-Config.ClearPath.Range    = 500   -- How far away to check for monsters while traveling.
-Config.ClearPath.SpecType = 0x2   -- What kind of monsters to attack. 0x0 = kill all | 0x2 = kill champion + unique + boss | 0x4 = kill unique + boss.
-Config.ClearPath.Areas    = {     -- A list of area IDs where ClearPath will be active. If you do not put any areas in this list the bot will clear ALL areas.
+Config.ClearPath.Enabled  = true    -- Set true to enable the bot clearing enemies while pathfinding.
+Config.ClearPath.Range    = 500     -- How far away to check for monsters while traveling.
+Config.ClearPath.SpecType = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
+Config.ClearPath.Areas    = {       -- A list of area IDs where ClearPath will be active. If you do not put any areas in this list the bot will clear ALL areas.
   -- Find area IDs in _areas.txt
   74, -- Arcane Sanctuary
 
