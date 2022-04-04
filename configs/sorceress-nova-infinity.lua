@@ -123,7 +123,7 @@ Config.RepairPercent  = 35      -- Durability percent of any equipped item that 
 Config.UseHP          = 75      -- Drink a healing potion if life is under designated percent.
 Config.UseRejuvHP     = 40      -- Drink a rejuvenation potion if life is under designated percent.
 Config.UseMP          = 30      -- Drink a mana potion if mana is under designated percent.
-Config.UseRejuvMP     = 10      -- Drink a rejuvenation potion if mana is under designated percent.
+Config.UseRejuvMP     = 15      -- Drink a rejuvenation potion if mana is under designated percent.
 Config.UseMercHP      = 70      -- Give a healing potion to your merc if his/her life is under designated percent.
 Config.UseMercRejuv   = 35      -- Give a rejuvenation potion to your merc if his/her life is under designated percent.
 
@@ -264,7 +264,7 @@ Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodgin
 Config.DodgeHP            = 100     -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
-Config.PacketCasting      = 1       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
+Config.PacketCasting      = 2       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
 Config.PrecastRange       = 20      -- Precast skill (BOs, Shields, ...) will be used when a monster is this far away.
 Config.TeleStomp          = false   -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
 Config.ClearType          = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
