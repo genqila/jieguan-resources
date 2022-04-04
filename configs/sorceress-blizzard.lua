@@ -264,7 +264,7 @@ Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodgin
 Config.DodgeHP            = 100     -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
-Config.PacketCasting      = 0       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
+Config.PacketCasting      = 1       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
 Config.PrecastRange       = 20      -- Precast skill (BOs, Shields, ...) will be used when a monster is this far away.
 Config.TeleStomp          = true    -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
 Config.ClearType          = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
