@@ -23,7 +23,7 @@ Cf. https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-sta
 
 ## Download Windows using Rufus
 
-Rufus download: https://rufus.ie/en/\
+Download [Rufus](https://rufus.ie/en/).\
 Change `SELECT` to `DOWNLOAD` using arrow then click on `DOWNLOAD` to choose the right ISO.\
 Close Rufus.
 
