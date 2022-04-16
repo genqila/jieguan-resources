@@ -47,7 +47,13 @@ Config.Scripts.ForgottenReliquary.Enabled     = false
 
 Config.Scripts.A3Sewers.Enabled               = false
 
+-- get area id -> https://github.com/kolton/d2bot-with-kolbot/blob/master/d2bs/kolbot/sdk/areas.txt
 Config.Scripts.ChestMania.Enabled             = false
+Config.Scripts.ChestMania.Act1                = { }
+Config.Scripts.ChestMania.Act2                = { }
+Config.Scripts.ChestMania.Act3                = { }
+Config.Scripts.ChestMania.Act4                = { }
+Config.Scripts.ChestMania.Act5                = { }
 
 Config.Scripts.Travincal.Enabled              = false
 
@@ -88,14 +94,14 @@ Config.Scripts.Baal.SoulQuit                  = false
 Config.Scripts.Baal.KillBaal                  = false
 
 -- #### Character Settings ####
-Config.ClassID        = 3       -- Sorceress: 1 | Paladin: 3
+Config.ClassID        = 3       -- [Sorceress: 1 | Paladin: 3]
 Config.CharacterName  = "Hammerdin" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
 
 -- #### General Settings ####
-Config.Mode           = 0       -- Single Player: 0 | Battle.net: 0
-Config.Difficulty     = 2       -- NormaL: 0 | Nightmare: 1 | Hell: 2
+Config.Mode           = 0       -- [Single Player: 0 | Battle.net: 1]
+Config.Difficulty     = 2       -- [NormaL: 0 | Nightmare: 1 | Hell: 2]
 Config.PublicMode     = false   -- Normal botting, no open tp: false | Town portal for Chaos and Baal: true
-Config.GameType       = 0       -- Quick Play: 0 | Lobby: 1 (requires GameName)
+Config.GameType       = 0       -- [Quick Play: 0 | Lobby: 1 (requires GameName)]
 Config.GameName       = ""      -- Game name the bot will use. Bot will add numbers at the end automatically.
 Config.GamePassword   = ""      -- Game password, set to "" for no password.
 Config.MinGameTime    = 90      -- Minimum game time in seconds. If the bot finishes the run early it will wait in town until the time is reached.
@@ -157,7 +163,7 @@ Config.PickitFiles      = {
   "pickits\\minimal.nip",
 }
 
--- #### Gamble Setting ####
+-- #### Gamble Settings ####
 Config.Gamble           = true
 Config.GambleGoldStart  = 2400000
 Config.GambleGoldStop   = 1800000
@@ -203,7 +209,7 @@ Config.AttackSkill = {
   98, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
 }
 
---[[ #### Advanced Attack config.####
+--[[ #### Custom Attack Setting ####
 Allows custom skills to be used on custom monsters. See _monsters.txt for monster IDs
 Format: [ID] = {timed skill id, untimed skill id}
 Example: [156] = {38, -1} -- use Charged Bolt on Andariel ]]--
@@ -218,30 +224,29 @@ Config.CustomAttack = {
   [381] = { 112, 124 }, -- skmage_cold3 (Death Mage along Achmel the Cursed)
 }
 
--- #### Low Mana Skills ####
+-- #### Low Mana Skill Setting ####
 Config.LowManaSkill = {
   -1, -- Skill to use when out of mana (timed)
   -1, -- Second skill to use when out of mana (untimed)
 }
 
--- Skip immune monsters.
--- Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
--- To skip enemies with dual immunes put both types in brackets on one line, e.g. { "cold", "fire" }.
+--[[ #### Skip Immune Setting ####
+Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
+To skip enemies with dual immunes put both types in brackets on one line, e.g. { "cold", "fire" }. ]]--
 Config.SkipImmune = {
   { "magic" },
 }
 
--- Skip enchanted monsters.
--- Possible options: "extra strong", "extra fast", "cursed", "magic resistant",
---  "fire enchanted", "lightning enchanted", "cold enchanted", "mana burn", "teleportation",
---  "spectral hit", "stone skin", "multiple shots".
--- Can be combined with the same format as Immunities.
+--[[ #### Skip Enchant Setting ####
+Possible options: "extra strong", "extra fast", "cursed", "magic resistant", "fire enchanted", "lightning enchanted",
+  "cold enchanted", "mana burn", "teleportation", "spectral hit", "stone skin", "multiple shots".
+Can be combined with the same format as Immunities. ]]--
 Config.SkipEnchant = {
 
 }
 
--- Skip monsters with auras.
--- Possible options: "fanaticism", "might"
+--[[ #### Skip Aura Setting ####
+Possible options: "fanaticism", "might" ]]--
 Config.SkipAura = {
 
 }
@@ -251,20 +256,28 @@ Config.Paladin.Vigor      = true        -- Use Vigor when running
 Config.Paladin.Charge     = true        -- Use Charge when running
 Config.Paladin.Redemption = { 45, 25 }  -- Use Redemption when HP or MP percent is less than or equal to designated percent. { life, mana }
 
+-- #### SafeCast Settings ####
+-- This option should be used if you want to cast skills at a safe distance when there are many monsters.
+-- Whenever the bot has to cast a skill, he wil try to find a safe position instead of standing too close to a cluster of monster.
+Config.SafeCastEnabled          = false   -- Whether SafeCast is enabled or not. ONLY WORKS FOR SORCERESS
+Config.SafeCastRadius           = 5       -- What radius around the player to take in account for monsters count.
+Config.SafeCastMonsterThreshold = 15      -- How many monsters has to be in the SafeCastRadius to trigger a re-position. This is weigthed against your HP. [5 = Low Gear | 10 = CTA or MaxBlock | 15 = CTA and MaxBlock]
+
 -- #### Dodge Settings ####
 Config.Dodge              = false   -- Move away from monsters that get too close. Don't use with short-ranged attacks.
 Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
-Config.DodgeHP            = 100     -- Dodge only if HP percent is less than or equal to designated percent.
+Config.DodgeHP            = 70      -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
-Config.PacketCasting      = 2       -- [0 = disable | 1 = packet teleport | 2 = full packet casting]
-Config.PrecastRange       = 20      -- Precast skill (BOs, Shields, ...) will be used when a monster is this far away.
+Config.PacketCasting      = 2       -- [Disable: 0 | Teleport only: 1 | All skills: 2]
+Config.PrecastRange       = 20      -- Precast skills (BOs, Shields, ...) will be used when a monster is this far away.
+Config.PrecastForce       = false   -- Enable to force precast on each new script start, otherwise will only refresh 30s before expiration.
 Config.TeleStomp          = true    -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
 Config.ClearType          = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
 Config.BossPriority       = true    -- Set to true to attack Unique/SuperUnique monsters first when clearing.
 
--- #### ClearPath Setting ####
+-- #### ClearPath Settings ####
 Config.ClearPath.Enabled  = true    -- Set true to enable the bot clearing enemies while pathfinding.
 Config.ClearPath.Range    = 500     -- How far away to check for monsters while traveling.
 Config.ClearPath.SpecType = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
@@ -277,4 +290,225 @@ Config.ClearPath.Areas    = {       -- A list of area IDs where ClearPath will b
   129, -- Worldstone Keep Level 2
   130, -- Worldstone Keep Level 3
   131, -- Throne of Destruction
+}
+
+-- #### Crafting Constants ####
+Roll = {
+	All = 0,
+	Eth = 1,
+	NonEth = 2
+}
+
+Recipe = {
+  Gem = 0,
+  HitPower = {
+    Helm = 1,
+    Boots = 2,
+    Gloves = 3,
+    Belt = 4,
+    Shield = 5,
+    Body = 6,
+    Amulet = 7,
+    Ring = 8,
+    Weapon = 9
+  },
+  Blood = {
+    Helm = 10,
+    Boots = 11,
+    Gloves = 12,
+    Belt = 13,
+    Shield = 14,
+    Body = 15,
+    Amulet = 16,
+    Ring = 17,
+    Weapon = 18
+  },
+  Caster = {
+    Helm = 19,
+    Boots = 20,
+    Gloves = 21,
+    Belt = 22,
+    Shield = 23,
+    Body = 24,
+    Amulet = 25,
+    Ring = 26,
+    Weapon = 27
+  },
+  Safety = {
+    Helm = 28,
+    Boots = 29,
+    Gloves = 30,
+    Belt = 31,
+    Shield = 32,
+    Body = 33,
+    Amulet = 34,
+    Ring = 35,
+    Weapon = 36
+  },
+  Unique = {
+    Weapon = {
+      ToExceptional = 37,
+      ToElite = 38
+    },
+    Armor = {
+      ToExceptional = 39,
+      ToElite = 40
+    }
+  },
+  Rare = {
+    Weapon = {
+      ToExceptional = 41,
+      ToElite = 42
+    },
+    Armor = {
+      ToExceptional = 43,
+      ToElite = 44
+    }
+  },
+  Socket = {
+    Shield = 45,
+    Weapon = 46,
+    Armor = 47,
+    Helm = 48
+  },
+  Rune = 49,
+  Token = 50,
+}
+
+--[[ #### Craft Setting ####
+
+Recipes the bot can craft:
+  Recipe.Gem
+  Recipe.Rune
+  Recipe.Token
+
+  Recipe.HitPower.Helm
+  Recipe.HitPower.Boots
+  Recipe.HitPower.Gloves
+  Recipe.HitPower.Belt
+  Recipe.HitPower.Shield
+  Recipe.HitPower.Body
+  Recipe.HitPower.Amulet
+  Recipe.HitPower.Ring
+  Recipe.HitPower.Weapon
+
+  Recipe.Blood.Helm
+  Recipe.Blood.Boots
+  Recipe.Blood.Gloves
+  Recipe.Blood.Belt
+  Recipe.Blood.Shield
+  Recipe.Blood.Body
+  Recipe.Blood.Amulet
+  Recipe.Blood.Ring
+  Recipe.Blood.Weapon
+
+  Recipe.Caster.Helm
+  Recipe.Caster.Boots
+  Recipe.Caster.Gloves
+  Recipe.Caster.Belt
+  Recipe.Caster.Shield
+  Recipe.Caster.Body
+  Recipe.Caster.Amulet
+  Recipe.Caster.Ring
+  Recipe.Caster.Weapon
+
+  Recipe.Safety.Helm
+  Recipe.Safety.Boots
+  Recipe.Safety.Gloves
+  Recipe.Safety.Belt
+  Recipe.Safety.Shield
+  Recipe.Safety.Body
+  Recipe.Safety.Amulet
+  Recipe.Safety.Ring
+  Recipe.Safety.Weapon
+
+  Recipe.Unique.Weapon.ToExceptional
+  Recipe.Unique.Weapon.ToElite
+  Recipe.Unique.Armor.ToExceptional
+  Recipe.Unique.Armor.ToElite
+
+  Recipe.Rare.Weapon.ToExceptional
+  Recipe.Rare.Weapon.ToElite
+  Recipe.Rare.Armor.ToExceptional
+  Recipe.Rare.Armor.ToElite
+
+  Recipe.Socket.Shield
+  Recipe.Socket.Weapon
+  Recipe.Socket.Armor
+  Recipe.Socket.Helm
+
+All recipes are written like this = { recipe_name, item_name_or_classid, eth }
+
+Item name and classids are found here -> https://github.com/blizzhackers/kolbot/blob/master/d2bs/kolbot/libs/NTItemAlias.dbl
+
+Some example recipe results, these need to be put into your put pickit file to keep the resulting items
+the bot will automatically get ingredients. You do not need put the prerequisite items like chip gem/flawless gems in pickit file.
+
+Config.Recipes = {
+  { Recipe.Gem, "Flawless Topaz" }, -- This is to use 3x Flawless Topaz to a make perfect topaz
+  { Recipe.Token }, -- This is to create tokens
+  { Recipe.Rune, "El Rune" }, -- This is to turn 3x El Rune into an eld rune
+  { Recipe.Caster.Ring }, -- This is for crafting a caster ring
+  { Recipe.HitPower.Gloves, "Vambraces" }, -- This is to craft a hitpower glove and bot will use the "Vambraces" it finds
+}
+
+Some more example recipes, but this is need you make some extra lines in your pickit file.
+You will need to add the base item for your pickit, and the bot will automatically get ingredients needed for the craft.
+
+You will need to do this for all this recipes =
+  Recipe.Unique.Weapon.ToExceptional
+  Recipe.Unique.Weapon.ToElite
+  Recipe.Unique.Armor.ToExceptional
+  Recipe.Unique.Armor.ToElite
+  Recipe.Rare.Weapon.ToExceptional
+  Recipe.Rare.Weapon.ToElite
+  Recipe.Rare.Armor.ToExceptional
+  Recipe.Rare.Armor.ToElite
+  Recipe.Socket.Shield
+  Recipe.Socket.Weapon
+  Recipe.Socket.Armor
+  Recipe.Socket.Helm
+
+For this, you also need to do
+  Roll.Eth - This will tell the bot to only use Eth item for craft
+  Roll.NonEth - This will tell the bot to only use NO Eth item for craft (non-ethereal)
+  Roll.All - This will tell the bot to only use with Eth or Noneth item
+
+Config.Recipes = {
+  { Recipe.Socket.Weapon, "Thresher", Roll.Eth }, -- This will roll sockets into a "Thresher" and only bot will only do this with "Eth" (ethereal)
+}
+
+For this recipe you need to add a line in your pickit like
+
+[Name] == Thresher && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 0 # [MaxQuantity] == 1
+[Name] == Thresher && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 4
+
+This will cause the bot to keep 1x Eth Thresher for crafting after bot does the craft, he will only keep
+Eth Thresher that has 4 sockets if the resulting craft is 1 OR 2 OR 3 socket bot will discard the resulting item.
+]]--
+Config.Cubing   = false
+Config.Recipes  = {
+  --{ Recipe.Gem, "Flawless Amethyst" }, -- Make Perfect Amethyst
+  --{ Recipe.Gem, "Flawless Topaz" }, -- Make Perfect Topaz
+  --{ Recipe.Gem, "Flawless Sapphire" }, -- Make Perfect Sapphire
+  --{ Recipe.Gem, "Flawless Emerald" }, -- Make Perfect Emerald
+  --{ Recipe.Gem, "Flawless Ruby" }, -- Make Perfect Ruby
+  --{ Recipe.Gem, "Flawless Diamond" }, -- Make Perfect Diamond
+  --{ Recipe.Gem, "Flawless Skull" }, -- Make Perfect Skull
+
+  --{ Recipe.Token }, -- Make Token of Absolution
+
+  --{ Recipe.Rune, "Lem Rune" }, -- Upgrade Lem to Pul
+  --{ Recipe.Rune, "Pul Rune" }, -- Upgrade Pul to Um
+  --{ Recipe.Rune, "Um Rune" }, -- Upgrade Um to Mal
+  --{ Recipe.Rune, "Mal Rune" }, -- Upgrade Mal to Ist
+  --{ Recipe.Rune, "Ist Rune" }, -- Upgrade Ist to Gul
+  --{ Recipe.Rune, "Gul Rune" }, -- Upgrade Gul to Vex
+
+  --{ Recipe.HitPower.Gloves, "Vambraces" }, -- Make HitPower Gloves using "Vambraces"
+  --{ Recipe.Blood.Helm, "Armet"}, -- Make Blood Helm for "Armet"
+  --{ Recipe.Caster.Amulet }, -- Make Caster Amulet
+  --{ Recipe.Caster.Ring }, -- Make Caster Ring
+
+  --{ Recipe.Socket.Weapon, "Thresher", Roll.Eth }, -- Make "Thresher" using ONLY "Eth"
 }
