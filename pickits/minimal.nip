@@ -1,0 +1,11 @@
+[Name] == SuperManaPotion
+[Name] == SuperHealingPotion
+[Name] == RejuvenationPotion
+[Name] == FullRejuvenationPotion
+
+[Flag] == Runeword
+[Name] == SmallCharm && [Quality] == Unique
+[Name] == LargeCharm && [Quality] == Unique
+[Name] == GrandCharm && [Quality] == Unique
+
+[Name] >= MalRune && [Name] <= ZodRune
