@@ -95,7 +95,7 @@ Config.Scripts.Baal.KillBaal                  = false
 
 -- #### Character Settings ####
 Config.ClassID        = 3       -- [Sorceress: 1 | Paladin: 3]
-Config.CharacterName  = "Hammerdin" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
+Config.CharacterName  = "Hammer" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
 
 -- #### General Settings ####
 Config.Mode           = 0       -- [Single Player: 0 | Battle.net: 1]
