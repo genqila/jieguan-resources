@@ -3,29 +3,29 @@ Set true to run the script. Set false to not run the script.
 DO NOT CHANGE BOT ORDER - THIS WILL MAKE ERRORS ]]--
 
 --[[ ACT 1 ]]--
-Config.Scripts.Cows.Enabled                   = false
+Config.Scripts.Cows.Enabled                   = true
 
-Config.Scripts.Mausoleum.Enabled              = false
+Config.Scripts.Mausoleum.Enabled              = true
 Config.Scripts.Mausoleum.ClearCrypt           = false
 
-Config.Scripts.Countess.Enabled               = false
+Config.Scripts.Countess.Enabled               = true
 
-Config.Scripts.UndergroundPassage.Enabled     = false
+Config.Scripts.UndergroundPassage.Enabled     = true
 
-Config.Scripts.Pits.Enabled                   = false
-Config.Scripts.Pits.ClearPits1                = false
+Config.Scripts.Pits.Enabled                   = true
+Config.Scripts.Pits.ClearPits1                = true
 
-Config.Scripts.Andariel.Enabled               = false
+Config.Scripts.Andariel.Enabled               = true
 
 --[[ ACT 2 ]]--
-Config.Scripts.StonyTombs.Enabled             = false
-Config.Scripts.StonyTombs.ClearStonyTombs2    = false
+Config.Scripts.StonyTombs.Enabled             = true
+Config.Scripts.StonyTombs.ClearStonyTombs2    = true
 
-Config.Scripts.AncientTunnels.Enabled         = false
+Config.Scripts.AncientTunnels.Enabled         = true
 
 Config.Scripts.Arcane.Enabled                 = false
 
-Config.Scripts.Summoner.Enabled               = false
+Config.Scripts.Summoner.Enabled               = true
 Config.Scripts.Summoner.KillDuriel            = false
 
 Config.Scripts.Tombs.Enabled                  = false
@@ -33,11 +33,11 @@ Config.Scripts.Tombs.Enabled                  = false
 Config.Scripts.Duriel.Enabled                 = false
 
 --[[ ACT 3 ]]--
-Config.Scripts.ArachnidLair.Enabled           = false
+Config.Scripts.ArachnidLair.Enabled           = true
 
-Config.Scripts.SwampyPits.Enabled             = false
-Config.Scripts.SwampyPits.ClearSwampyPits2    = false
-Config.Scripts.SwampyPits.ClearSwampyPits3    = false
+Config.Scripts.SwampyPits.Enabled             = true
+Config.Scripts.SwampyPits.ClearSwampyPits2    = true
+Config.Scripts.SwampyPits.ClearSwampyPits3    = true
 
 Config.Scripts.DisusedFane.Enabled            = false
 
@@ -45,7 +45,7 @@ Config.Scripts.RuinedTemple.Enabled           = false
 
 Config.Scripts.ForgottenReliquary.Enabled     = false
 
-Config.Scripts.A3Sewers.Enabled               = false
+Config.Scripts.A3Sewers.Enabled               = true
 
 -- get area id -> https://github.com/kolton/d2bot-with-kolbot/blob/master/d2bs/kolbot/sdk/areas.txt
 Config.Scripts.ChestMania.Enabled             = false
@@ -55,17 +55,17 @@ Config.Scripts.ChestMania.Act3                = { }
 Config.Scripts.ChestMania.Act4                = { }
 Config.Scripts.ChestMania.Act5                = { }
 
-Config.Scripts.Travincal.Enabled              = false
+Config.Scripts.Travincal.Enabled              = true
 
-Config.Scripts.Mephisto.Enabled               = false
-Config.Scripts.Mephisto.KillCouncil           = false
-Config.Scripts.Mephisto.TakeRedPortal         = false
+Config.Scripts.Mephisto.Enabled               = true
+Config.Scripts.Mephisto.KillCouncil           = true
+Config.Scripts.Mephisto.TakeRedPortal         = true
 
 --[[ ACT 4 ]]--
 Config.Scripts.Diablo.Enabled                 = false
 Config.Scripts.Diablo.Entrance                = false
 
-Config.Scripts.FastDiablo.Enabled             = false
+Config.Scripts.FastDiablo.Enabled             = true
 
 --[[ ACT 5 ]]--
 Config.Scripts.Abaddon.Enabled                = false
@@ -81,21 +81,21 @@ Config.Scripts.IcyCellar.Enabled              = false
 Config.Scripts.Eldritch.Enabled               = false
 Config.Scripts.Eldritch.KillShenk             = false
 
-Config.Scripts.Pindleskin.Enabled             = false
+Config.Scripts.Pindleskin.Enabled             = true
 Config.Scripts.Pindleskin.KillNihlathak       = false
 
 Config.Scripts.Nihlathak.Enabled              = false
 
 Config.Scripts.Worldstone.Enabled             = false
 
-Config.Scripts.Baal.Enabled                   = false
+Config.Scripts.Baal.Enabled                   = true
 Config.Scripts.Baal.DollQuit                  = false
 Config.Scripts.Baal.SoulQuit                  = false
-Config.Scripts.Baal.KillBaal                  = false
+Config.Scripts.Baal.KillBaal                  = true
 
 -- #### Character Settings ####
 Config.ClassID        = 1       -- [Sorceress: 1 | Paladin: 3]
-Config.CharacterName  = "Blizzard" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
+Config.CharacterName  = "Blova" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
 
 -- #### General Settings ####
 Config.Mode           = 0       -- [Single Player: 0 | Battle.net: 1]
@@ -202,11 +202,11 @@ If you do not use timed spells, just use the untimed skill ID. ]]--
 Config.AttackSkill = {
   -1, -- Preattack skill
   59, -- Primary skill for bosses
-  45, -- Primary untimed skill for bosses. Use -1 if above skill is an untimed skill
+  48, -- Primary untimed skill for bosses. Use -1 if above skill is an untimed skill
   59, -- Primary skill for other monsters
-  55, -- Primary untimed skill for other monsters. Use -1 if above skill is an untimed skill
+  48, -- Primary untimed skill for other monsters. Use -1 if above skill is an untimed skill
   -1, -- Alternate skill for immune monsters
-  -1, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
+  55, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
 }
 
 --[[ #### Custom Attack Setting ####
@@ -227,7 +227,7 @@ Config.LowManaSkill = {
 Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
 To skip enemies with dual immunes put both types in brackets on one line, e.g. { "cold", "fire" }. ]]--
 Config.SkipImmune = {
-  { "cold", "physical" }
+
 }
 
 --[[ #### Skip Enchant Setting ####
@@ -267,11 +267,11 @@ Config.Sorceress.StaticImmune = {
 -- Whenever the bot has to cast a skill, he wil try to find a safe position instead of standing too close to a cluster of monster.
 Config.SafeCastEnabled          = false   -- Whether SafeCast is enabled or not. ONLY WORKS FOR SORCERESS
 Config.SafeCastRadius           = 5       -- What radius around the player to take in account for monsters count.
-Config.SafeCastMonsterThreshold = 10      -- How many monsters has to be in the SafeCastRadius to trigger a re-position. This is weigthed against your HP. [5 = Low Gear | 10 = CTA or MaxBlock | 15 = CTA and MaxBlock]
+Config.SafeCastMonsterThreshold = 15      -- How many monsters has to be in the SafeCastRadius to trigger a re-position. This is weigthed against your HP. [5 = Low Gear | 10 = CTA or MaxBlock | 15 = CTA and MaxBlock]
 
 -- #### Dodge Settings ####
 Config.Dodge              = true    -- Move away from monsters that get too close. Don't use with short-ranged attacks.
-Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
+Config.DodgeRange         = 7       -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
 Config.DodgeHP            = 70      -- Dodge only if HP percent is less than or equal to designated percent.
 

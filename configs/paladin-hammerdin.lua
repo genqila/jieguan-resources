@@ -135,11 +135,11 @@ Config.UseMercRejuv   = 35      -- Give a rejuvenation potion to your merc if hi
 
 -- Potion types for belt columns from left to right. Rejuvenation potions must always be rightmost.
 -- Supported potions - Healing ("hp"), Mana ("mp") and Rejuvenation ("rv")
-Config.BeltColumn     = { "hp", "hp", "mp", "rv" }
+Config.BeltColumn     = { "hp", "mp", "rv", "rv" }
 
 -- Minimum amount of potions from left to right. If we have less, go to vendor to purchase more.
 -- Set rejuvenation columns to 0, because they can't be bought.
-Config.MinColumn      = { 3, 3, 3, 0 }
+Config.MinColumn      = { 3, 3, 0, 0 }
 
 --[[ #### Inventory Setting ####
 *** READ VERY CAREFULLY, OTHERWISE THE BOT WILL SELL YOUR ANNI / TORCH / GHEED ***
@@ -157,7 +157,7 @@ Config.Inventory = {
 Config.PickRange        = 40      -- Pick radius.
 Config.FastPick         = true    -- Check and pick items between attacks.
 Config.OpenChests       = true    -- Open chests. Controls key buying.
-Config.OpenChestsRange  = 20      -- How far it should check for chest when travelling.
+Config.OpenChestsRange  = 15      -- How far it should check for chest when travelling.
 Config.PickitFiles      = {
   -- You can use a relative file path. To add multiple pickits with folders use double backslash in path.
   "pickits\\minimal.nip",
@@ -253,7 +253,7 @@ Config.SkipAura = {
 
 -- #### Class Settings ####
 Config.Paladin.Vigor      = true        -- Use Vigor when running
-Config.Paladin.Charge     = true        -- Use Charge when running
+Config.Paladin.Charge     = false       -- Use Charge when running
 Config.Paladin.Redemption = { 45, 25 }  -- Use Redemption when HP or MP percent is less than or equal to designated percent. { life, mana }
 
 -- #### SafeCast Settings ####
@@ -264,23 +264,23 @@ Config.SafeCastRadius           = 5       -- What radius around the player to ta
 Config.SafeCastMonsterThreshold = 15      -- How many monsters has to be in the SafeCastRadius to trigger a re-position. This is weigthed against your HP. [5 = Low Gear | 10 = CTA or MaxBlock | 15 = CTA and MaxBlock]
 
 -- #### Dodge Settings ####
-Config.Dodge              = false   -- Move away from monsters that get too close. Don't use with short-ranged attacks.
+Config.Dodge              = true    -- Move away from monsters that get too close. Don't use with short-ranged attacks.
 Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
-Config.DodgeHP            = 70      -- Dodge only if HP percent is less than or equal to designated percent.
+Config.DodgeHP            = 30      -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
 Config.PacketCasting      = 2       -- [Disable: 0 | Teleport only: 1 | All skills: 2]
 Config.PrecastRange       = 20      -- Precast skills (BOs, Shields, ...) will be used when a monster is this far away.
 Config.PrecastForce       = false   -- Enable to force precast on each new script start, otherwise will only refresh 30s before expiration.
 Config.TeleStomp          = true    -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
-Config.ClearType          = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
+Config.ClearType          = 0xF     -- What kind of monsters to attack. [0x0 = all | 0x7 = champion + unique + boss | 0xF = unique + boss]
 Config.BossPriority       = true    -- Set to true to attack Unique/SuperUnique monsters first when clearing.
 
 -- #### ClearPath Settings ####
 Config.ClearPath.Enabled  = true    -- Set true to enable the bot clearing enemies while pathfinding.
 Config.ClearPath.Range    = 500     -- How far away to check for monsters while traveling.
-Config.ClearPath.SpecType = 0x7     -- What kind of monsters to attack. [0xF = skip normal | 0x7 = champions/bosses | 0 = all]
+Config.ClearPath.SpecType = 0xF     -- What kind of monsters to attack. [0x0 = all | 0x7 = champion + unique + boss | 0xF = unique + boss]
 Config.ClearPath.Areas    = {       -- A list of area IDs where ClearPath will be active. If you do not put any areas in this list the bot will clear ALL areas.
   -- Find area IDs in _areas.txt
   74, -- Arcane Sanctuary
