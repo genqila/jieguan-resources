@@ -22,7 +22,9 @@
 
 ### Expensive (Lvl 90)
 
-1) NovaInfinity: [Planner](https://d2.maxroll.gg/d2planner/2q010632) | [Character File](../characters/NovaInfinity.d2s) | [Config](../configs/sorceress-nova-infinity.lua)
+1) NovaInfinity (ES): [Planner](https://d2.maxroll.gg/d2planner/2q010632) | [Character File](../characters/NovaInfinity.d2s) | [Config](../configs/sorceress-nova-infinity.lua)
+2) Lightning (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/vx0106nx#1) | [Character File](../characters/Lightning.d2s) | [Config](../configs/sorceress-lightning.lua)
+3) Blizzard (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/vx0106nx#2) | [Character File](../characters/Blizzard.d2s) | [Config](../configs/sorceress-blizzard.lua)
 
 ## Hell Areas
 

@@ -129,7 +129,7 @@ Config.RepairPercent  = 35      -- Durability percent of any equipped item that 
 Config.UseHP          = 75      -- Drink a healing potion if life is under designated percent.
 Config.UseRejuvHP     = 40      -- Drink a rejuvenation potion if life is under designated percent.
 Config.UseMP          = 30      -- Drink a mana potion if mana is under designated percent.
-Config.UseRejuvMP     = 0       -- Drink a rejuvenation potion if mana is under designated percent.
+Config.UseRejuvMP     = 10      -- Drink a rejuvenation potion if mana is under designated percent.
 Config.UseMercHP      = 70      -- Give a healing potion to your merc if his/her life is under designated percent.
 Config.UseMercRejuv   = 35      -- Give a rejuvenation potion to your merc if his/her life is under designated percent.
 
