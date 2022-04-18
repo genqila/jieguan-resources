@@ -227,7 +227,7 @@ Config.LowManaSkill = {
 Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
 To skip enemies with dual immunes put both types in brackets on one line, e.g. { "cold", "fire" }. ]]--
 Config.SkipImmune = {
-  { "cold", "physical" }
+  { "cold" }
 }
 
 --[[ #### Skip Enchant Setting ####

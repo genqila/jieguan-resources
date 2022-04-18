@@ -94,8 +94,8 @@ Config.Scripts.Baal.SoulQuit                  = false
 Config.Scripts.Baal.KillBaal                  = false
 
 -- #### Character Settings ####
-Config.ClassID        = 3       -- [Sorceress: 1 | Paladin: 3]
-Config.CharacterName  = "Hammer" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
+Config.ClassID        = 1       -- [Sorceress: 1 | Paladin: 3]
+Config.CharacterName  = "Blizzfova" -- Name of the character. Bot will automatically find character and select it. **** CASE SENSITIVE ***
 
 -- #### General Settings ####
 Config.Mode           = 0       -- [Single Player: 0 | Battle.net: 1]
@@ -117,7 +117,7 @@ Config.TownMP         = 0       -- Go to town if mana is under designated percen
 
 -- #### Town Settings ####
 Config.HealHP         = 65      -- Go to a healer if under designated percent of life.
-Config.HealMP         = 20      -- Go to a healer if under designated percent of mana.
+Config.HealMP         = 65      -- Go to a healer if under designated percent of mana.
 Config.HealStatus     = true    -- Go to a healer if poisoned or cursed.
 Config.UseMerc        = true    -- Use merc.
 Config.MercWatch      = true    -- Instant merc revive during battle.
@@ -128,14 +128,14 @@ Config.RepairPercent  = 35      -- Durability percent of any equipped item that 
 -- #### Potion Settings ####
 Config.UseHP          = 75      -- Drink a healing potion if life is under designated percent.
 Config.UseRejuvHP     = 40      -- Drink a rejuvenation potion if life is under designated percent.
-Config.UseMP          = 30      -- Drink a mana potion if mana is under designated percent.
-Config.UseRejuvMP     = 10      -- Drink a rejuvenation potion if mana is under designated percent.
+Config.UseMP          = 75      -- Drink a mana potion if mana is under designated percent.
+Config.UseRejuvMP     = 40      -- Drink a rejuvenation potion if mana is under designated percent.
 Config.UseMercHP      = 70      -- Give a healing potion to your merc if his/her life is under designated percent.
 Config.UseMercRejuv   = 35      -- Give a rejuvenation potion to your merc if his/her life is under designated percent.
 
 -- Potion types for belt columns from left to right. Rejuvenation potions must always be rightmost.
 -- Supported potions - Healing ("hp"), Mana ("mp") and Rejuvenation ("rv")
-Config.BeltColumn     = { "hp", "mp", "rv", "rv" }
+Config.BeltColumn     = { "hp", "hp", "rv", "rv" }
 
 -- Minimum amount of potions from left to right. If we have less, go to vendor to purchase more.
 -- Set rejuvenation columns to 0, because they can't be bought.
@@ -201,12 +201,12 @@ You can set two kinds of spells: timed (blizzard, meteor) and untimed (fireball,
 If you do not use timed spells, just use the untimed skill ID. ]]--
 Config.AttackSkill = {
   -1, -- Preattack skill
-  112, -- Primary skill for bosses
-  113, -- Primary untimed skill for bosses. Use -1 if above skill is an untimed skill
-  112, -- Primary skill for other monsters
-  113, -- Primary untimed skill for other monsters. Use -1 if above skill is an untimed skill
-  101, -- Alternate skill for immune monsters
-  98, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
+  59, -- Primary skill for bosses
+  44, -- Primary untimed skill for bosses. Use -1 if above skill is an untimed skill
+  59, -- Primary skill for other monsters
+  44, -- Primary untimed skill for other monsters. Use -1 if above skill is an untimed skill
+  -1, -- Alternate skill for immune monsters
+  -1, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
 }
 
 --[[ #### Custom Attack Setting ####
@@ -214,14 +214,7 @@ Allows custom skills to be used on custom monsters. See _monsters.txt for monste
 Format: [ID] = {timed skill id, untimed skill id}
 Example: [156] = {38, -1} -- use Charged Bolt on Andariel ]]--
 Config.CustomAttack = {
-  -- Halls of Vaught
-  [682] = { 112, 124 }, -- minion9 (Slayer)
-  [526] = { 112, 124 }, -- nihlathakboss (Nihlathak)
 
-  -- Throne of Destruction
-  [670] = { 101, 124 }, -- unraveler9 (Horadrim Ancient)
-  [105] = { 101, 124 }, -- unraveler5 (Achmel the Cursed & Minions)
-  [381] = { 112, 124 }, -- skmage_cold3 (Death Mage along Achmel the Cursed)
 }
 
 -- #### Low Mana Skill Setting ####
@@ -234,7 +227,7 @@ Config.LowManaSkill = {
 Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
 To skip enemies with dual immunes put both types in brackets on one line, e.g. { "cold", "fire" }. ]]--
 Config.SkipImmune = {
-  { "magic" },
+  { "cold" },
 }
 
 --[[ #### Skip Enchant Setting ####
@@ -252,9 +245,22 @@ Config.SkipAura = {
 }
 
 -- #### Class Settings ####
-Config.Paladin.Vigor      = true        -- Use Vigor when running
-Config.Paladin.Charge     = false       -- Use Charge when running
-Config.Paladin.Redemption = { 45, 25 }  -- Use Redemption when HP or MP percent is less than or equal to designated percent. { life, mana }
+Config.Sorceress.UseTelekinesis = true  -- Use telekinesis on units that allow it. Example: Shrines, Waypoints, Chests, and Portals.
+Config.Sorceress.CastStatic     = 60    -- Cast static until the target is at designated life percent. | 100 = disabled
+Config.Sorceress.StaticList     = {     -- Find monster IDs in _monsters.txt
+  -- Bosses
+  156, -- andariel (Andariel)
+  211, -- duriel (Duriel)
+  242, -- mephisto (Mephisto)
+  243, -- diablo (Diablo)
+  544, -- baalcrab (Baal)
+}
+-- Use Static Field on immune monsters
+-- Possible options: "fire", "cold", "lightning", "poison", "physical", "magic".
+-- To use Static on enemies with dual immunes put both types in brackets on one line, e.g. { "cold","fire" }.
+Config.Sorceress.StaticImmune = {
+  { "cold" },
+}
 
 -- #### SafeCast Settings ####
 -- This option should be used if you want to cast skills at a safe distance when there are many monsters.
@@ -265,9 +271,9 @@ Config.SafeCastMonsterThreshold = 15      -- How many monsters has to be in the 
 
 -- #### Dodge Settings ####
 Config.Dodge              = true    -- Move away from monsters that get too close. Don't use with short-ranged attacks.
-Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
+Config.DodgeRange         = 7       -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
-Config.DodgeHP            = 50      -- Dodge only if HP percent is less than or equal to designated percent.
+Config.DodgeHP            = 70      -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
 Config.PacketCasting      = 2       -- [Disable: 0 | Teleport only: 1 | All skills: 2]

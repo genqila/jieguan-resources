@@ -262,7 +262,7 @@ Config.SafeCastMonsterThreshold = 15      -- How many monsters has to be in the 
 Config.Dodge              = true    -- Move away from monsters that get too close. Don't use with short-ranged attacks.
 Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova: 7 | Otherwise: 15]
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
-Config.DodgeHP            = 30      -- Dodge only if HP percent is less than or equal to designated percent.
+Config.DodgeHP            = 50      -- Dodge only if HP percent is less than or equal to designated percent.
 
 -- #### Monster Settings ####
 Config.PacketCasting      = 2       -- [Disable: 0 | Teleport only: 1 | All skills: 2]
