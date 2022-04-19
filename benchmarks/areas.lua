@@ -5,7 +5,7 @@ DO NOT CHANGE BOT ORDER - THIS WILL MAKE ERRORS ]]--
 --[[ ACT 1 ]]--
 Config.Scripts.Cows.Enabled                   = false
 
-Config.Scripts.Mausoleum.Enabled              = true
+Config.Scripts.Mausoleum.Enabled              = false
 Config.Scripts.Mausoleum.ClearCrypt           = false
 
 Config.Scripts.Countess.Enabled               = true
@@ -51,7 +51,7 @@ Config.Scripts.A3Sewers.Enabled               = false
 Config.Scripts.ChestMania.Enabled             = true
 Config.Scripts.ChestMania.Act1                = { }
 Config.Scripts.ChestMania.Act2                = { }
-Config.Scripts.ChestMania.Act3                = { 79, 80, 81 } -- Lower Kurast, Kurast Bazaar, Upper Kurast
+Config.Scripts.ChestMania.Act3                = { 79 } -- Lower Kurast
 Config.Scripts.ChestMania.Act4                = { }
 Config.Scripts.ChestMania.Act5                = { }
 

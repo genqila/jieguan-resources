@@ -135,7 +135,7 @@ Config.UseMercRejuv   = 35      -- Give a rejuvenation potion to your merc if hi
 
 -- Potion types for belt columns from left to right. Rejuvenation potions must always be rightmost.
 -- Supported potions - Healing ("hp"), Mana ("mp") and Rejuvenation ("rv")
-Config.BeltColumn     = { "hp", "hp", "rv", "rv" }
+Config.BeltColumn     = { "hp", "mp", "rv", "rv" }
 
 -- Minimum amount of potions from left to right. If we have less, go to vendor to purchase more.
 -- Set rejuvenation columns to 0, because they can't be bought.
@@ -246,6 +246,8 @@ Config.SkipAura = {
 
 -- #### Class Settings ####
 Config.Sorceress.UseTelekinesis = true  -- Use telekinesis on units that allow it. Example: Shrines, Waypoints, Chests, and Portals.
+Config.Sorceress.UseHydra       = false -- Set to true to use hydra, your untimed skill will be replaced by hydra if the target is not fire immune and you don't have 6 hydra in range of the target.
+Config.Sorceress.HydraClearType = 0x0   -- What kind of monsters to use hydra on. [0x0 = all | 0x7 = champion + unique + boss | 0xF = unique + boss]
 Config.Sorceress.CastStatic     = 60    -- Cast static until the target is at designated life percent. | 100 = disabled
 Config.Sorceress.StaticList     = {     -- Find monster IDs in _monsters.txt
   -- Bosses
