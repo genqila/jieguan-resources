@@ -203,10 +203,10 @@ Config.AttackSkill = {
   -1, -- Preattack skill
   121, -- Primary skill for bosses
   123, -- Primary untimed skill for bosses. Use -1 if above skill is an untimed skill
-  121, -- Primary skill for other monsters
+  101, -- Primary skill for other monsters
   123, -- Primary untimed skill for other monsters. Use -1 if above skill is an untimed skill
-  -1, -- Alternate skill for immune monsters
-  -1, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
+  101, -- Alternate skill for immune monsters
+  123, -- Alternate untimed skill for immune monsters. Use -1 if above skill is an untimed skill
 }
 
 --[[ #### Custom Attack Setting ####
@@ -214,9 +214,7 @@ Allows custom skills to be used on custom monsters. See _monsters.txt for monste
 Format: [ID] = {timed skill id, untimed skill id}
 Example: [156] = {38, -1} -- use Charged Bolt on Andariel ]]--
 Config.CustomAttack = {
-  -- Halls of Vaught
-  [682] = { 121, 124 }, -- minion9 (Slayer)
-  [526] = { 121, 124 }, -- nihlathakboss (Nihlathak)
+
 }
 
 -- #### Low Mana Skill Setting ####
@@ -264,15 +262,16 @@ Config.DodgeRange         = 15      -- How far to move away when dodging. [Nova:
 Config.DodgeMonsterRange  = 5       -- How close a monster can get before dodging. [Nova: 6 | Otherwise: 10]
 Config.DodgeHP            = 50      -- Dodge only if HP percent is less than or equal to designated percent.
 
--- #### Monster Settings ####
+-- #### Cast Settings ####
 Config.PacketCasting      = 2       -- [Disable: 0 | Teleport only: 1 | All skills: 2]
+Config.PrimarySlot        = -1      -- Primary weapon slot: -1 = disabled (will try to determine primary slot by using non-cta slot that's not empty), 0 = slot I, 1 = slot II
 Config.PrecastRange       = 20      -- Precast skills (BOs, Shields, ...) will be used when a monster is this far away.
 Config.PrecastForce       = false   -- Enable to force precast on each new script start, otherwise will only refresh 30s before expiration.
 Config.TeleStomp          = true    -- Use merc to attack monsters if they're immune to attacks but not to physical damage.
+
+-- #### Clear Settings ####
 Config.ClearType          = 0xF     -- What kind of monsters to attack. [0x0 = all | 0x7 = champion + unique + boss | 0xF = unique + boss]
 Config.BossPriority       = true    -- Set to true to attack Unique/SuperUnique monsters first when clearing.
-
--- #### ClearPath Settings ####
 Config.ClearPath.Enabled  = true    -- Set true to enable the bot clearing enemies while pathfinding.
 Config.ClearPath.Range    = 500     -- How far away to check for monsters while traveling.
 Config.ClearPath.SpecType = 0xF     -- What kind of monsters to attack. [0x0 = all | 0x7 = champion + unique + boss | 0xF = unique + boss]
