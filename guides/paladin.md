@@ -1,4 +1,4 @@
-# Sorceress Guide
+# Paladin Guide
 
 ## Builds
 
