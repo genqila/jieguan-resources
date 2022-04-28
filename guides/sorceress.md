@@ -9,8 +9,8 @@
 
 ### Cheap (Lvl 90)
 
-1) Blizzfova (ES): [Planner](https://d2.maxroll.gg/d2planner/xx01060k#1) | [Character File](../characters/Blizzfova.d2s) | [Config](../configs/sorceress-blizzfova.lua)
-2) Blizzhydra (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/1a01067n#1) | [Character File](../characters/Blizzhydra.d2s) | [Config](../configs/sorceress-blizzhydra.lua)
+1) Blizzhydra (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/1a01067n#1) | [Character File](../characters/Blizzhydra.d2s) | [Config](../configs/sorceress-blizzhydra.lua)
+2) Blizzfova (ES): [Planner](https://d2.maxroll.gg/d2planner/xx01060k#1) | [Character File](../characters/Blizzfova.d2s) | [Config](../configs/sorceress-blizzfova.lua)
 3) Blizzwaller (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/1a01067n#2) | [Character File](../characters/Blizzwaller.d2s) | [Config](../configs/sorceress-blizzwaller.lua)
 4) Orbova (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/1a01067n#3) | [Character File](../characters/Orbova.d2s) | [Config](../configs/sorceress-orbova.lua)
 5) Blova (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/1a01067n#4) | [Character File](../characters/Blova.d2s) | [Config](../configs/sorceress-blova.lua)
@@ -18,8 +18,8 @@
 
 ### Medium (Lvl 90)
 
-1) Blizzfova (ES): [Planner](https://d2.maxroll.gg/d2planner/xx01060k#2) | [Character File](../characters/BlizzfovaT.d2s) | [Config](../configs/sorceress-blizzfova.lua)
-2) BlizzhydraT (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/pn0106np#1) | [Character File](../characters/BlizzhydraT.d2s) | [Config](../configs/sorceress-blizzhydra.lua)
+1) BlizzhydraT (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/pn0106np#1) | [Character File](../characters/BlizzhydraT.d2s) | [Config](../configs/sorceress-blizzhydra.lua)
+2) Blizzfova (ES): [Planner](https://d2.maxroll.gg/d2planner/xx01060k#2) | [Character File](../characters/BlizzfovaT.d2s) | [Config](../configs/sorceress-blizzfova.lua)
 3) BlizzwallerT (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/pn0106np#2) | [Character File](../characters/BlizzwallerT.d2s) | [Config](../configs/sorceress-blizzwaller.lua)
 4) OrbovaT (MaxBlock): [Planner](https://d2.maxroll.gg/d2planner/pn0106np#3) | [Character File](../characters/OrbovaT.d2s) | [Config](../configs/sorceress-orbova.lua)
 
