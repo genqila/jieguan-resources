@@ -58,6 +58,7 @@ Config.Scripts.ChestMania.Act5                = { }
 Config.Scripts.Travincal.Enabled              = false
 
 Config.Scripts.Mephisto.Enabled               = false
+Config.Scripts.Mephisto.MoatTrick             = false
 Config.Scripts.Mephisto.KillCouncil           = false
 Config.Scripts.Mephisto.TakeRedPortal         = false
 

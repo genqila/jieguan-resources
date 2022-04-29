@@ -75,6 +75,7 @@ When the RDC window open, before login to Parsec you can do a quick setup of the
 - Task Bar
 - Network Sharing Options
 - Keyboard Layout
+- Account UAC
 - ...
 
 We will use Parsec but through a Virtual Display Adapter so when we disconnect from Parsec (or Hyper-V RDP) we still have a monitor plugged.
