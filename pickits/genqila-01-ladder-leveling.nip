@@ -1,0 +1,9 @@
+
+// Merc
+[Name] == Scythe            && [Quality] <= Superior  # [Sockets] == 4
+[Name] == BattleScythe      && [Quality] <= Superior  # [Sockets] == 4
+[Name] == Thresher          && [Quality] <= Superior  # [Sockets] == 4
+
+[Name] == MagePlate         && [Quality] <= Superior  # [Sockets] == 3
+
+[Name] == DeathMask         && [Quality] == Set # [ColdResist] >= 10    // Tal Rasha's Horadric Crest (Tal Mask)

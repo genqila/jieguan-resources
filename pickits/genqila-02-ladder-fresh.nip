@@ -1,0 +1,195 @@
+// Runes
+[Name] == EthRune                                                               #                   # [MaxQuantity] == 1    // Stealth x1
+[Name] == TirRune                                                               #                   # [MaxQuantity] == 10   // Insight x10
+[Name] == NefRune                                                               #                   # [MaxQuantity] == 1    // Smoke x1
+[Name] == TalRune                                                               #                   # [MaxQuantity] == 21   // Spirit x10 + Insight x10 + Stealth x1
+[Name] == RalRune                                                               #                   # [MaxQuantity] == 10   // Insight x10
+[Name] == OrtRune                                                               #                   # [MaxQuantity] == 11   // Spirit x10 + Lore x1
+[Name] == ThulRune                                                              #                   # [MaxQuantity] == 11   // Spirit x10 + Treachery x1
+[Name] == AmnRune                                                               #                   # [MaxQuantity] == 10   // Spirit x10
+[Name] == SolRune                                                               #                   # [MaxQuantity] == 11   // Insight x10 + Lore x1
+[Name] == ShaelRune                                                             #                   # [MaxQuantity] == 1    // Treachery x1
+[Name] == HelRune                                                               #                   # [MaxQuantity] == 20   // Socket Reset x20
+[Name] == LumRune                                                               #                   # [MaxQuantity] == 1    // Smoke x1
+[Name] == KoRune                                                                #                   # [MaxQuantity] == 4    // Sanctuary x2
+[Name] == LemRune                                                               #                   # [MaxQuantity] == 1    // Treachery x1
+
+// #### Uniques ####
+
+// Spirit (Monarch sockets are automatically cubed)
+[Name] == CrystalSword          && [Quality] <= Superior && [Flag] != Ethereal  # [Sockets] == 4    # [MaxQuantity] == 1
+[Name] == Monarch               && [Quality] == Superior && [Flag] != Ethereal  # [Sockets] == 4
+[Name] == Monarch               && [Quality] == Normal && [Flag] != Ethereal    # [Sockets] == 0    # [MaxQuantity] == 1
+[Name] == Monarch               && [Quality] == Normal && [Flag] != Ethereal    # [Sockets] == 4
+
+// Insight / Infinity (Thresher sockets are automatically cubed)
+[Name] == Thresher              && [Quality] == Superior && [Flag] == Ethereal  # [Sockets] == 4
+[Name] == Thresher              && [Quality] == Normal && [Flag] == Ethereal    # [Sockets] == 0    # [MaxQuantity] == 1
+[Name] == Thresher              && [Quality] == Normal && [Flag] == Ethereal    # [Sockets] == 4
+
+// Treachery
+[Name] == MagePlate             && [Quality] == Superior && [Flag] != Ethereal  # [Sockets] == 3
+[Name] == MagePlate             && [Quality] == Normal && [Flag] != Ethereal    # [Sockets] == 3    # [MaxQuantity] == 1
+[Name] == MagePlate             && [Quality] <= Superior && [Flag] == Ethereal  # [Sockets] == 3
+[Name] == ArchonPlate           && [Quality] <= Superior && [Flag] == Ethereal  # [Sockets] == 3
+
+// Fortitude (Archon Plate sockets are automatically cubed)
+[Name] == ArchonPlate           && [Quality] == Superior && [Flag] == Ethereal  # [Sockets] == 4
+[Name] == ArchonPlate           && [Quality] == Normal && [Flag] == Ethereal    # [Sockets] == 0    # [MaxQuantity] == 1
+[Name] == ArchonPlate           && [Quality] == Normal && [Flag] == Ethereal    # [Sockets] == 4
+
+// Sanctuary  (Hyperion sockets needs to be manually cubed)
+[Name] == Hyperion              && [Quality] == Superior && [Flag] != Ethereal  # [Sockets] == 3    # [MaxQuantity] == 1
+[Name] == Hyperion              && [Quality] == Normal && [Flag] != Ethereal    # [Sockets] == 0
+[Name] == Hyperion              && [Quality] == Normal && [Flag] != Ethereal    # [Sockets] == 3    # [MaxQuantity] == 1
+
+// #### Uniques ####
+
+// 1 - Unique Helm
+[Name] == GrimHelm              && [Quality] == Unique                                                                      // Vampire Gaze
+[Name] == GrandCrown            && [Quality] == Unique                                                                      // Crown of Thieves
+[Name] == Shako                 && [Quality] == Unique                                                                      // Harlequin Crest
+[Name] == Demonhead             && [Quality] == Unique                                                                      // Andariel's Visage
+[Name] == SpiredHelm            && [Quality] == Unique                                                                      // Nightwing's Veil
+[Name] == Corona                && [Quality] == Unique                                                                      // Crown of Ages
+[Name] == Tiara                 && [Quality] == Unique                                                                      // Kira's Guardian
+[Name] == Diadem                && [Quality] == Unique                                                                      // Griffon's Eye
+[Name] == SlayerGuard           && [Quality] == Unique                                                                      // Arreat's Face
+
+// 2 - Unique Amulet
+[Type] == Amulet                && [Quality] == Unique  # [LightResist] == 35                                               // Highlord's Wrath
+[Type] == Amulet                && [Quality] == Unique  # [Strength] == 5 && [ColdResist] >= 20                             // Mara's Kaleidoscope
+
+// 3 - Unique Armor
+[Name] == SerpentSkinArmor      && [Quality] == Unique                                                                      // Skin of the Vipermagi
+[Name] == MeshArmor             && [Quality] == Unique                                                                      // Shaftstop
+[Name] == Cuirass               && [Quality] == Unique                                                                      // Duriel's Shell
+[Name] == RussetArmor           && [Quality] == Unique                                                                      // Skullder's Ire
+[Name] == TemplarCoat           && [Quality] == Unique                                                                      // Guardian Angel
+[Name] == DuskShroud            && [Quality] == Unique                                                                      // Ormus' Robes
+[Name] == BalrogSkin            && [Quality] == Unique  # [ItemAllSkills] >= 2                                              // Arkaine's Valor
+[Name] == SacredArmor           && [Quality] == Unique                                                                      // Tyrael's Might
+
+// 4 - Unique Weapon
+[Name] == BoneKnife             && [Quality] == Unique                                                                      // Wizardspike
+[Name] == Thresher              && [Quality] == Unique                                                                      // The Reaper's Toll
+[Name] == CrypticAxe            && [Quality] == Unique                                                                      // Tomb Reaver
+[Name] == ArchonStaff           && [Quality] == Unique                                                                      // Mang Song's Lesson
+[Name] == ElderStaff            && [Quality] == Unique                                                                      // Ondal's Wisdom
+[Name] == Tulwar                && [Quality] == Unique                                                                      // Blade of Ali Baba
+[Name] == PhaseBlade            && [Quality] == Unique                                                                      // Azurewrath
+[Name] == ColossusBlade         && [Quality] == Unique                                                                      // The Grandfather
+[Name] == SwirlingCrystal       && [Quality] == Unique                                                                      // The Oculus
+[Name] == DimensionalShard      && [Quality] == Unique                                                                      // Death's Fathom
+[Name] == EldritchOrb           && [Quality] == Unique                                                                      // Eschuta's Temper
+[name] == TombWand              && [Quality] == Unique                                                                      // Arm of King Leoric
+[name] == LichWand              && [Quality] == Unique                                                                      // Boneshade
+[Name] == UnearthedWand         && [Quality] == Unique                                                                      // Death's Web
+[Name] == CeremonialJavelin     && [Quality] == Unique                                                                      // Titan's Revenge
+[Name] == GreaterTalons         && [Quality] == Unique                                                                      // Bartuc's Cut-Throat
+
+// 5 - Unique Shield
+[Name] == RoundShield           && [Quality] == Unique                                                                      // Moser's Blessed Circle
+[Name] == GrimShield            && [Quality] == Unique                                                                      // Lidless Wall
+[Name] == Monarch               && [Quality] == Unique                                                                      // Stormshield
+[Name] == HierophantTrophy      && [Quality] == Unique                                                                      // Homunculus
+[Name] == GildedShield          && [Quality] == Unique                                                                      // Herald of Zakarum
+
+// 6 & 7 - Unique Rings
+[Type] == Ring                  && [Quality] == Unique  # [ItemMagicBonus] >= 15                                            // Nagelring
+[Type] == Ring                  && [Quality] == Unique  # [ItemMaxManaPercent] == 25                                        // Stone of Jordan
+[Type] == Ring                  && [Quality] == Unique  # [MaxHP] == 40 && [MagicDamageReduction] >= 12                     // Dwarf Star
+[Type] == Ring                  && [Quality] == Unique  # [Dexterity] >= 15 && [ToHit] >= 150                               // Raven Frost
+[Type] == Ring                  && [Quality] == Unique  # [MaxStamina] == 50 && [LifeLeech] >= 3                            // Bul-Kathos' Wedding Band
+[Type] == Ring                  && [Quality] == Unique  # [LifeLeech] >= 6 && [ArmorClassvsMissile] >= 100                  // Carrion Wind
+[Type] == Ring                  && [Quality] == Unique  # [PoisonResist] >= 20 && [NormalDamageReduction] >= 7              // Nature's Peace
+[Type] == Ring                  && [Quality] == Unique  # [ItemAbsorbLightPercent] >= 10                                    // Wisp Projector
+
+// 8 - Unique Belt
+[Name] == Belt                  && [Quality] == Unique                                                                      // Nightsmoke
+[Name] == HeavyBelt             && [Quality] == Unique                                                                      // Goldwrap
+[Name] == DemonhideSash         && [Quality] == Unique                                                                      // String of Ears
+[Name] == SharkskinBelt         && [Quality] == Unique                                                                      // Razortail
+[Name] == BattleBelt            && [Quality] == Unique                                                                      // Snowclash
+[Name] == WarBelt               && [Quality] == Unique                                                                      // Thundergod's Vigor
+[Name] == SpiderwebSash         && [Quality] == Unique                                                                      // Arachnid Mesh
+[Name] == VampirefangBelt       && [Quality] == Unique                                                                      // Nosferatu's Coil
+[Name] == MithrilCoil           && [Quality] == Unique                                                                      // Verdungo's Hearty Cord
+
+// 9 - Unique Boots
+[Name] == LightPlatedBoots      && [Quality] == Unique                                                                      // Goblin Toe
+[Name] == DemonhideBoots        && [Quality] == Unique                                                                      // Iinfernostride
+[Name] == SharkskinBoots        && [Quality] == Unique                                                                      // Waterwalk
+[Name] == BattleBoots           && [Quality] == Unique                                                                      // War Traveler
+[Name] == WarBoots              && [Quality] == Unique                                                                      // Gore Rider
+[Name] == ScarabshellBoots      && [Quality] == Unique                                                                      // Sandstorm Trek
+
+// 10 - Unique Gloves
+[Name] == ChainGloves           && [Quality] == Unique                                                                      // Chance Guards
+[Name] == LightGauntlets        && [Quality] == Unique                                                                      // Magefist
+[Name] == Gauntlets             && [Quality] == Unique                                                                      // Frostburn
+[Name] == VampireboneGloves     && [Quality] == Unique                                                                      // Dracul's Grasp
+[Name] == OgreGauntlets         && [Quality] == Unique                                                                      // Steelrend
+
+// Unique Misc
+[Type] == Jewel                 && [Quality] == Unique                                                                      // Rainbow Facet
+[Name] == GrandCharm            && [Quality] == Unique                                                                      // Gheed's Fortune
+
+// #### Sets ####
+
+// Set: Tal Rasha's Wrappings
+[Name] == SwirlingCrystal       && [Quality] == Set     #                                           # [MaxQuantity] == 1    // Tal Rasha's Lidless Eye Random
+[Name] == SwirlingCrystal       && [Quality] == Set     # [SkillColdMastery] >= 2                   # [MaxQuantity] == 1    // Tal Rasha's Lidless Eye Cold
+[Name] == SwirlingCrystal       && [Quality] == Set     # [SkillFireMastery] >= 2                   # [MaxQuantity] == 1    // Tal Rasha's Lidless Eye Fire
+[Name] == SwirlingCrystal       && [Quality] == Set     # [SkillColdMastery] >= 2 && [SkillFireMastery] >= 2                // Tal Rasha's Lidless Eye Hybrid
+[Name] == DeathMask             && [Quality] == Set     #                                           # [MaxQuantity] == 1    // Tal Rasha's Horadric Crest Random
+[Name] == DeathMask             && [Quality] == Set     # [Defense] >= 123                                                  // Tal Rasha's Horadric Crest 75th
+[Name] == LacqueredPlate        && [Quality] == Set                                                                         // Tal Rasha's Guardianship
+[Type] == Amulet                && [Quality] == Set     # [SorceressSkills] == 2                                            // Tal Rasha's Adjudication
+[Name] == MeshBelt              && [Quality] == Set     # [ItemMagicBonus] >= 10                                            // Tal Rasha's Fine Spun Cloth
+
+// Random
+[Name] == WingedHelm            && [Quality] == Set                                                                         // Guillaume's Face
+[Name] == BrambleMitts          && [Quality] == Set                                                                         // Laying of Hands
+[Name] == HeavyBracers          && [Quality] == Set                                                                         // Trang-oul's Claws
+[Name] == MeshBoots             && [Quality] == Set                                                                         // Natalya's Soul
+[Name] == BattleBoots           && [Quality] == Set                                                                         // Aldur's Advance
+[Name] == WarBoots              && [Quality] == Set                                                                         // Immortal King's Pillar
+
+// #### Magic ####
+
+// Charms
+[Name] == SmallCharm            && [Quality] == Magic   # [ItemMagicBonus] == 6                                                                       // SC: 6+ MF
+[Name] == SmallCharm            && [Quality] == Magic   # [MaxHP] >= 16                                                                               // SC: 16+ Life
+[Name] == SmallCharm            && [Quality] == Magic   # [FHR] >= 5                                                                                  // SC: 5 FHR
+[Name] == SmallCharm            && [Quality] == Magic   # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 16                                // SC: 4+@
+[Name] == SmallCharm            && [Quality] == Magic   # ([FireResist] >= 10 || [LightResist] >= 10 || [ColdResist] >= 10 || [PoisonResist] >= 10)   // SC: 10+ Single Res
+[Name] == GrandCharm            && [Quality] == Magic   # [ColdResist]+[FireResist]+[LightResist]+[PoisonResist] >= 52                                // SC: 13+@
+[Name] == GrandCharm            && [Quality] == Magic   # ([FireResist] >= 26 || [LightResist] >= 26 || [ColdResist] >= 26 || [PoisonResist] >= 26)   // SC: 26+ Single Res
+
+// Circlets
+[Type] == Circlet               && [Quality] == Magic   # [PaladinSkills] == 2 && [FCR] == 20 && [Sockets] == 2
+[Type] == Circlet               && [Quality] == Magic   # [NecromancerSkills] == 2 && [FCR] == 20 && [Sockets] == 2
+[Type] == Circlet               && [Quality] == Magic   # [SorceressSkills] == 2 && [FCR] == 20 && [Sockets] == 2
+[Type] == Circlet               && [Quality] == Magic   # [Skilllightning] == 3 && [FCR] == 20 && [Sockets] == 2
+
+// Amulets
+[Type] == Amulet                && [Quality] == Magic   # [SorceressSkills] == 3
+[Type] == Amulet                && [Quality] == Magic   # [NecromancerSkills] == 3
+[Type] == Amulet                && [Quality] == Magic   # [PaladinSkills] == 3
+
+// Armors
+[Name] == GothicPlate           && [Quality] == Magic   # [Sockets] == 4 && [MaxHP] >= 98
+[Name] == AncientArmor          && [Quality] == Magic   # [Sockets] == 4 && [MaxHP] >= 98
+[Name] == BreastPlate           && [Quality] == Magic   # [Sockets] == 3 && [MaxHP] == 80 && [ItemLevelReq] <= 30
+[Name] == LightPlate            && [Quality] == Magic   # [Sockets] == 3 && [MaxHP] == 80 && [ItemLevelReq] <= 30
+[Name] == MagePlate             && [Quality] == Magic   # [Sockets] == 3 && [MaxHP] == 80 && [ItemLevelReq] <= 30
+[Type] == Circlet               && [Quality] == Magic   # [FRW] == 30 && [Sockets] == 3
+
+// Weapons
+[Type] == Scepter                                       # ([PaladinSkills] == 2 || [PaliCombatSkilltab] == 3) && [SkillConcentration]+[SkillBlessedHammer] == 6
+[Type] == Scepter                                       # ([PaladinSkills] == 2 || [PaliCombatSkilltab] == 3) && [SkillFistoftheHeavens]+[SkillConviction] == 6
+[Name] == GreaterTalons         && [Quality] == Magic   # [Sockets] == 3 && [IAS] >= 30 && [SkillVenom] == 3
+[Name] == RunicTalons           && [Quality] == Magic   # [Sockets] == 3 && [IAS] >= 30 && [SkillVenom] == 3
+
+

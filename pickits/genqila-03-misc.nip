@@ -1,0 +1,38 @@
+// Potions
+[Name] == SuperManaPotion
+[Name] == SuperHealingPotion
+[Name] == RejuvenationPotion
+[Name] == FullRejuvenationPotion
+
+// Important Items
+[Flag] == Runeword
+[Name] == SmallCharm && [Quality] == Unique
+[Name] == LargeCharm && [Quality] == Unique
+[Name] == GrandCharm && [Quality] == Unique
+
+// Keys
+[Name] == KeyOfTerror
+[Name] == KeyOfHate
+[Name] == KeyOfDestruction
+[name] == Mephisto'sBrain
+[name] == Diablo'sHorn
+[name] == Baal'sEye
+
+// Essences
+[Name] == TwistedEssenceOfSuffering         # # [MaxQuantity] == 5
+[Name] == ChargedEssenceOfHatred            # # [MaxQuantity] == 5
+[Name] == BurningEssenceOfTerror            # # [MaxQuantity] == 5
+[Name] == FesteringEssenceOfDestruction     # # [MaxQuantity] == 5
+[Name] == TokenOfAbsolution
+
+// Gems
+[Name] == PerfectAmethyst                   # # [MaxQuantity] == 12
+[Name] == PerfectDiamond                    # # [MaxQuantity] == 12
+[Name] == PerfectEmerald                    # # [MaxQuantity] == 12
+[Name] == PerfectRuby                       # # [MaxQuantity] == 12
+[Name] == PerfectSapphire                   # # [MaxQuantity] == 12
+[Name] == PerfectSkull                      # # [MaxQuantity] == 12
+[Name] == PerfectTopaz                      # # [MaxQuantity] == 12
+
+// Runes
+[Name] >= PulRune && [Name] <= ZodRune
