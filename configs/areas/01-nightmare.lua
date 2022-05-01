@@ -94,6 +94,9 @@ Config.Scripts.Baal.DollQuit                  = false
 Config.Scripts.Baal.SoulQuit                  = false
 Config.Scripts.Baal.KillBaal                  = true
 
+Config.BeltColumn     = { "hp", "mp", "mp", "rv" }
+
+Config.MinColumn      = { 3, 3, 3, 0 }
 
 Config.BossPriority       = false
 Config.ClearPath.Enabled  = false
